@@ -1,0 +1,468 @@
+* {
+	margin: 0; 
+   	padding: 0;
+   	box-sizing: border-box}/*全局设置*/
+::-webkit-scrollbar{
+	display: none}/*定义整个滚动条的样式*/
+b{
+	color: #F93336}/*加粗字体设置*/
+a{
+	text-decoration: none;
+	color: #FFFFFF}/*取消链接下划线*/
+.sidebar{
+	position: fixed;
+	left: -250px;
+	height: 100%;
+	width: 250px;
+	background: #7d8597;
+	transition: all .5s ease;
+	z-index: 100}/*导航栏整个大小，转换位置，时间*/
+.sidebar header{
+	font-size: 25px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 70px;
+	background: #5c677d;
+	user-select: none}/*导航栏表头*/			
+.sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 17px;
+	color: #FFFFFF;
+	padding-left: 45px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255,.1);
+	border-bottom:1px solid black;
+	transition: .4s}/*各导航网页设置*/
+ul li:hover a{
+	padding-left: 50px}/*各导航网页图标*/
+.sidebar ul a i{
+	margin-right: 16px}/*文字与图标间距*/
+label #btn,label #cancel{
+	position: fixed;
+	cursor: pointer;
+	background: #7d8597;
+	border-radius: 3px}/*两个按钮共同设置*/
+label #btn{
+	position: fixed;
+	cursor:pointer;
+	background: #7d8597;
+	border-radius: 3px;
+	left: 23px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+	padding: 8px 10px;
+	transition: all .5s;
+	z-index: 200}/*菜单按钮*/
+label #cancel{
+	z-index: 200;
+	left: -195px;
+	top: 17px;
+	font-size: 20px;
+	color: #0a5275;
+	padding: 8px 10px;
+	transition: all .5s ease}/*小叉按钮*/
+#check{
+	display: none}/*隐藏元素*/
+#check:checked ~ .sidebar{
+	left: 0}/*点击按钮时导航栏位置*/
+#check:checked ~ label #btn{
+	left: 200px;
+	opacity: 0;
+	pointer-events: none}/*点击菜单按钮时导航栏位置*/
+#check:checked ~ label #cancel{
+	left: 195px}/*点击小叉按钮时导航栏位置*/
+#container{
+	width: 100%;
+	height: auto}/*整个大区块*/
+section{
+	height: 100vh;
+	font-size: 24px;
+	color: #FFFFFF;}/*每个区段的设置*/
+.img{
+	background-size: auto;
+	overflow: hidden;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	user-select: none;
+	cursor: default}/*图片设置*/
+#content1{
+	width: 100%;
+	text-indent: 2em;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #c4cbcf;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-family: "宋体"}/*文字*/
+#content2{
+	background: #dee2e6;
+	justify-content: center;
+	padding-top: 50px}/*文字*/
+h3{
+	text-align: center}
+.picture-word1{
+	width: 400px;
+	margin-left: 10%;
+	margin-top: 5%;
+	text-align: center;
+	float: left}/*附加图片*/
+.picture-word2{
+	width: 400px;
+	margin-right: 10%;
+	margin-top: 5%;
+	text-align: center;
+	float: right}/*附加图片*/
+.picture{
+	width: 360px;}/*图片位置*/
+.picture img{
+	display: block;
+	width: 100%}/*图片大小*/
+.word1{
+	margin-bottom: 25px}/*文字位置设置*/
+.word2{
+	margin-top: 25px}/*文字位置设置*/
+#content3{
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #c4cbcf;
+	justify-content: center;
+	align-items: center;
+	display: flex}/*区块设置*/
+#content4{
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #dee2e6;
+	justify-content: center;
+	align-items: center;
+	display: flex}/*区块设置*/
+.picture1{
+	width: 470px;
+	margin-right: 1%;
+	margin-top: 5%;
+	text-align: center;
+	float: right;}
+.picture1 img{
+	display: block;
+	width: 100%}
+.word3{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px}/*文字位置设置*/
+#content5{
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #c4cbcf;
+	padding-top: 50px;
+	text-align: center;
+	line-height: 50px}/*区块设置*/
+#content6{
+	width: 100%;
+	padding-top: 50px;
+	text-align: center;
+	line-height: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #dee2e6;}/*区块设置*/
+.because{
+	margin-top: 50px;
+	width: 100%;
+	text-align: left;
+	font-size: 45px;
+	padding-left: 100px}/*部分字体设置*/
+.picture2{
+	width: 800px;
+	margin-right: 5%;
+	margin-top: 5%;
+	text-align: center;
+	float: right;}/*图片设置*/
+.picture2 img{
+	display: block;
+	width: 100%;
+	margin-bottom: 50px}
+#content7{
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #c4cbcf;}/*区块设置*/
+#content8{
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #dee2e6;}/*区块设置*/
+.picture3{
+	width: 100px;
+	margin-right: 20%;
+	text-align: center;
+	float: right;}/*图片设置*/
+.picture3 img{
+	display: block;
+	width: 100%;
+	margin-bottom: 50px}
+.picture4{
+	width: 450px;
+	margin-left: 5%;
+	margin-top: 12%;
+	text-align: center;
+	float: left;}/*图片设置*/
+.picture4 img{
+	display: block;
+	width: 100%}
+.word5{
+	width: 400px;
+	float: right;
+	margin-top: 3%;
+	margin-right: 5%;
+	line-height: 50px;
+	letter-spacing: 5px}/*文字位置设置*/
+#content9{
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 50px;
+	background: #c4cbcf;
+	line-height: 50px}/*区块设置*/
+.picture5{
+	width: 600px;
+	margin-left: 10px;
+	margin-top: 5%;
+	text-align: center;
+	float: left;}/*图片设置*/
+.picture5 img{
+	display: block;
+	width: 100%}
+.word4{
+	width: 500px;
+	float: right;
+	margin-top: 11%;
+	margin-right: 10px;
+	line-height: 50px;
+	letter-spacing: 2px}/*文字位置设置*/
+#content10{
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #dee2e6;}/*区块设置*/
+.container1{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;}/*伸缩区块设置*/
+.container1 .card{
+    margin-top: 50px;
+    position: relative;
+    max-width: 250px;
+    height: 250px;
+    background: #fff;
+    margin: 20px 10px;
+    padding: 20px 7px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: .3s ease-in-out;}/*伸缩区块卡片设置*/
+.container1 .card:hover{
+    height: 400px;}/*伸缩区块卡片伸缩*/
+.container1 .card .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);}/*伸缩区块图片设置*/
+.container1 .card .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;}/*伸缩区块图片大小、圆角设置*/
+.container1 .card .qujian{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;}/*附加隐藏文字*/
+.container1 .card:hover .qujian{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;}/*鼠标悬停伸缩*/
+#content11{
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #c4cbcf;}/*区块设置*/
+#content12{
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background: #dee2e6;
+	line-height: 50px}/*区块设置*/
+#content13{
+	z-index: -1;
+	text-align: center;
+	padding-top: 50px;
+	background: #c4cbcf;}/*区块设置*/
+.container2{
+    position: relative; /*相对定位*/
+    width: 90%; /*宽度*/
+    display: grid; /*样式：网格*/
+    grid-template-rows: auto; /*网格块行数*/
+    grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); /*表格块列数（自动换行(所占大小，    minmax(最小值，最大值(区间))     )）*/
+    grid-gap: 0 40px; /*间距:上下0 左右40*/
+	justify-content: center; /*横轴*/
+    align-items: center; /*纵轴*/
+    min-height: 100vh; /*最小高度*/
+	margin:0; 
+	padding: 0; 
+	margin-left: 5%;
+	z-index: 1;}
+.container2 .box{ 
+    position:relative;
+    height: 390px;
+    background-color: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;margin-bottom: 150px}/*容器内 盒子*/
+.container2 .box::after{ 
+    content: ""; /*添加内容*/
+    position: absolute; /*绝对定位*/
+    top:0px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);}/*之后添加*/
+.container2 .box:before{
+    content: "";
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background:#fff;
+    transform: skew(2deg,2deg); /*扭曲*/
+    z-index: -1; } /*之前*/
+.container2 .box:nth-child(2n+1)::before{
+    background: linear-gradient(315deg,#f1c40f,#e64a19); /*渐变框*/} /*之后添加*/
+.container2 .box:nth-child(2n+2)::before{ 
+    background: linear-gradient(315deg,#16a085,#3498db);}
+.con{ 
+    position:relative;
+    margin: 20px;}/*盒内-内容*/
+.box .con h2{ 
+    position: absolute; 
+    top:-150px;
+    right: 3px;
+    margin: 0;
+    padding: 0;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.1);
+    transition:0.5s;
+    user-select: none; }/*背景标题(01,02,03,04)*/
+.box:hover .con h2{ 
+    top:-200px;}/*悬停后，进行移动*/
+.box .con h3{ 
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color:#fff;
+    opacity: 0.7; /*透明度*/
+    transition: 0.5s;}
+.box:hover .con h3{ 
+    opacity: 1;
+    font-size: 30px;}/*悬停后，进行透明度变化*/
+.box .con p{ 
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.5s;
+    opacity: 0.5;}/*盒内-内容主文字*/
+.box:hover .con p{ 
+    opacity: 1;}/*修改悬停后P的透明度*/
+.footer{
+	font-size: 12px;
+	font-family: "方正粗黑宋简体";
+	line-height: 1.5;
+	text-align:center}/*页脚设置*/
+.bannercontainer{
+	width: 100%;
+    position: relative;
+    height: 100%}/*轮播图设置*/
+.bannercontainer #banner ul{
+	list-style: none;
+    padding-left: 0}
+.bannercontainer #banner ul li{
+	position: absolute}
+.bannercontainer #banner ul li img{
+	width: 100%;
+    height: 657px}/*轮播图图片*/
+.bannercontainer #nexImg ,.bannercontainer #preImg{
+	margin: 10px;
+    position: absolute;
+    opacity: 0.5;
+   	top:50%;}/*轮播图左右按键*/
+.bannercontainer #nexImg img ,.bannercontainer #preImg img {
+	width: 35px;
+   	height: 60px;
+    opacity: 0.8;}
+.bannercontainer #nexImg{
+	right: 0;}
+.bannercontainer #nexImg:hover,.bannercontainer #preImg:hover{
+	cursor: pointer;
+    opacity: 0.5;}/*轮播图左右按键鼠标点击*/
+.bannercontainer .jumpBtn{
+	position: absolute;
+    bottom: 10px;
+    left: 45%;}
+.bannercontainer .jumpBtn ul{
+	margin-bottom:0;
+    padding: 0;
+    list-style: none;}
+.bannercontainer .jumpBtn ul li{
+	font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    width: 15px;
+   	height: 15px;
+    border-radius: 50px;
+    opacity: 0.4;}/*圆点跳跃*/
+.on{
+	opacity: 1;
+    display: block;
+    width: 100%;
+    height: 250px;
+    transition: 2s;}
+.out{
+	opacity: 0;
+    display: block;
+    width: 100%;
+    height: 250px;
+    transition: 2s;}/*图片之间转换*/
